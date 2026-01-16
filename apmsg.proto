@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+package com.edgecore.ucentral.protobuf.openlan;
+
+message UCentralMsg {
+    required uint32 version = 1; // set version to 1 for this version of msg
+    optional uint64 timestamp = 2;
+    required string topic = 3;
+    required string serial = 4;
+    required string msg = 5; // in JSON
+}

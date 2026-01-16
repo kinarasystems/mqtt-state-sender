@@ -1,0 +1,17 @@
+[project]
+name = "send-mqtt"
+version = "0.0.1"
+description = "Sample MQTT sender"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "paho-mqtt>=2.1.0",
+    "python-dotenv>=1.0.1",
+    "protobuf>=6.32.1",
+]
+
+[tool.flake8]
+max-line-length = 100
+
+[flake8]
+max-line-length = 100
