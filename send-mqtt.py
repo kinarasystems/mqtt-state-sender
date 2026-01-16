@@ -31,6 +31,7 @@ USER = os.getenv('MQTT_USER', DEFAULT_USER)
 PASS = os.getenv('MQTT_PASS', DEFAULT_PASS)
 CLIENT_ID = f"ucentralmqtt-pub-{random.randint(0, 1000)}"
 
+
 def main() -> int:
     '''Main program'''
     def on_connect(client, obj, flags, reason_code, properties):
@@ -59,7 +60,7 @@ def main() -> int:
         ucmsg.topic = d['topic']
         ucmsg.serial = d['serial']
         ucmsg.msg = json_msg
-        print(f"Sending message: topic: {d['topic']}, serial: {d['serial']}, " + \
+        print(f"Sending message: topic: {d['topic']}, serial: {d['serial']}, " +
               f"timestamp: {d['timestamp']}")
         if verbose:
             print(f"  Message: {json_msg}")
@@ -131,7 +132,7 @@ def main() -> int:
     if cnt != 1:
         print(f"Sent {cnt} messages")
     else:
-        print(f"Sent 1 message")
+        print("Sent 1 message")
     return 0
 
 
